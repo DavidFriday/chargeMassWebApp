@@ -1,0 +1,23 @@
+<h1>charge/mass ratio checker</h1>
+<p>ODE path generator for the P1 charge/mass ratio lab</p>
+<form method=post action="">
+
+<table>
+  {% for field in form %}
+    <tr>
+    <td>{{ field.name }}</td><td>{{ field }}</td>
+    <td>{{ field.label }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<p><input type=submit value=Generate></form></p>
+
+<p>
+{% if result != None %}
+<img src="{{ result }}" width=500>
+{% endif %}
+</p>
+
+<p>This code is distributed under the GNU General Public License, version 3,</p>
+<p>which means it can be used freely by anyone!</p>
